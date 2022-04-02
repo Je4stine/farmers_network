@@ -8,8 +8,8 @@ class startScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: const BoxDecoration(
-          image:
-              DecorationImage(image: AssetImage('assets/'), fit: BoxFit.cover)),
+          image: DecorationImage(
+              image: AssetImage('images/farmer3.jpeg'), fit: BoxFit.cover)),
       child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -21,11 +21,6 @@ class startScreen extends StatelessWidget {
               ),
             ),
             Image(image: AssetImage('assetName')),
-            // ignore: avoid_unnecessary_containers
-            Center(
-                child: Container(
-                    child:
-                        ElevatedButton(onPressed: null, child: Text('SignUp'))))
           ]),
     );
   }

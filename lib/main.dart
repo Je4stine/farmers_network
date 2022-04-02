@@ -10,6 +10,20 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(home: Scaffold(body: startScreen()));
+    return MaterialApp(
+      home: Scaffold(
+        body: startScreen(),
+        bottomNavigationBar:
+            BottomNavigationBar(items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.business), label: 'Business'),
+          BottomNavigationBarItem(icon: Icon(Icons.chat_sharp), label: 'Chats'),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.shopping_cart), label: 'Market'),
+          BottomNavigationBarItem(icon: Icon(Icons.more), label: 'More'),
+        ]),
+      ),
+    );
   }
 }
