@@ -20,10 +20,12 @@ class startScreen extends StatelessWidget {
                 fontSize: 40,
               ),
             ),
-            TextButton(
-                style: TextButton.styleFrom(),
-                onPressed: null,
-                child: Text('SignUp'))
+            Image(image: AssetImage('assetName')),
+            // ignore: avoid_unnecessary_containers
+            Center(
+                child: Container(
+                    child:
+                        ElevatedButton(onPressed: null, child: Text('SignUp'))))
           ]),
     );
   }
