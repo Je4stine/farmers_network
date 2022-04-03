@@ -1,16 +1,33 @@
 import 'package:flutter/material.dart';
 import 'screens/welcomepage.dart';
+import 'package:flutter/cupertino.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const Home());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class Home extends StatefulWidget {
+  const Home({Key? key}) : super(key: key);
 
+  @override
+  State<Home> createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: 'Farmers Network',
+      theme: ThemeData(
+        primarySwatch: Colors.green,
+      ),
+      darkTheme: ThemeData.dark(),
+      builder: (context, child) {
+        return CupertinoTheme(
+          data: const CupertinoThemeData(),
+          child: Material(child: child),
+        );
+      },
       home: Scaffold(
         body: const startScreen(),
         bottomNavigationBar:
