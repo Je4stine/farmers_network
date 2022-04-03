@@ -9,10 +9,9 @@ class startScreen extends StatelessWidget {
     return Container(
       decoration: const BoxDecoration(
           image: DecorationImage(
-              image: AssetImage('images/farmer3.jpeg'), fit: BoxFit.cover)),
+              image: AssetImage('images/farmers3.jpeg'), fit: BoxFit.cover)),
       child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
           children: const <Widget>[
             Text(
               'Welcome to',

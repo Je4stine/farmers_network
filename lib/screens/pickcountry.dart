@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
 class PickCountry extends StatefulWidget {
   const PickCountry({Key? key}) : super(key: key);
@@ -11,18 +10,16 @@ class PickCountry extends StatefulWidget {
 class _PickCountryState extends State<PickCountry> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Column(
-        children: const [
-          TextField(
-            decoration: InputDecoration(
-              border: OutlineInputBorder(),
-              prefixIcon: Icon(Icons.search),
-              hintText: 'Search country',
-            ),
-          )
-        ],
-      ),
+    return Column(
+      children: const [
+        TextField(
+          decoration: InputDecoration(
+            border: OutlineInputBorder(),
+            prefixIcon: Icon(Icons.search),
+            hintText: 'Search country',
+          ),
+        ),
+      ],
     );
   }
 }
