@@ -14,6 +14,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  int _currentIndex = 0;
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -30,16 +31,36 @@ class _HomeState extends State<Home> {
       },
       home: Scaffold(
         body: const startScreen(),
-        bottomNavigationBar:
-            BottomNavigationBar(items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.business), label: 'Business'),
-          BottomNavigationBarItem(icon: Icon(Icons.chat_sharp), label: 'Chats'),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.shopping_cart), label: 'Market'),
-          BottomNavigationBarItem(icon: Icon(Icons.more), label: 'More'),
-        ]),
+        bottomNavigationBar: BottomNavigationBar(
+          currentIndex: _currentIndex,
+          items: const <BottomNavigationBarItem>[
+            BottomNavigationBarItem(
+                icon: Icon(Icons.home),
+                label: 'Home',
+                backgroundColor: Colors.green),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.business),
+                label: 'Business',
+                backgroundColor: Colors.green),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.chat_sharp),
+                label: 'Chats',
+                backgroundColor: Colors.green),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.shopping_cart),
+                label: 'Market',
+                backgroundColor: Colors.green),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.more),
+                label: 'More',
+                backgroundColor: Colors.green),
+          ],
+          onTap: (index) {
+            setState(() {
+              _currentIndex = index;
+            });
+          },
+        ),
       ),
     );
   }

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../components/countries.dart';
+
 class PickCountry extends StatefulWidget {
   const PickCountry({Key? key}) : super(key: key);
 
@@ -19,6 +21,7 @@ class _PickCountryState extends State<PickCountry> {
             hintText: 'Search country',
           ),
         ),
+        Countries(),
       ],
     );
   }

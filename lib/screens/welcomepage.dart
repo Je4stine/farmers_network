@@ -9,16 +9,18 @@ class startScreen extends StatelessWidget {
     return Container(
       decoration: const BoxDecoration(
           image: DecorationImage(
-              image: AssetImage('images/farmers3.jpeg'), fit: BoxFit.cover)),
+              image: AssetImage('images/farmers1.jpg'), fit: BoxFit.cover)),
       child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: const <Widget>[
-            Text(
+            Center(
+                child: Text(
               'Welcome to',
               style: TextStyle(
-                fontSize: 40,
-              ),
-            ),
+                  fontSize: 40,
+                  color: Colors.white,
+                  fontWeight: FontWeight.w900),
+            )),
             Image(image: AssetImage('assetName')),
           ]),
     );
